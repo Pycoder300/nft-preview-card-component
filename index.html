@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; 
+    color: hsl(178, 100%, 50%)}
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      font-family: Outfit;
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 200px;
+      gap: 200px;
+      background-color: hsl(217, 54%, 11%);
+    }
+
+    .card-container{
+      width: 300px;
+      height: 600px;
+      padding: 1.5rem;
+      display: block;
+      background-color: hsl(216, 50%, 16%);
+      border-radius: 1rem;
+      position: relative;
+      margin-bottom: 3rem;
+    }
+    
+    .image-holder{
+      width: 100%;
+      height: 60%;
+      position: relative;
+    }
+
+    .cube{
+      height: 100%;
+      width: 100%;
+      border-radius: 0.5rem;
+      position: relative;
+    }
+
+    .cube:hover{
+      opacity: 0.3;
+    }
+
+    .image-holder:hover{
+      cursor: pointer;
+      position: relative;
+      background-color: hsla(178, 100%, 50%, 0.795);
+      border-radius: 0.5rem;
+      background-image: url(./images/icon-view.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .header{
+      font-size: 1.2rem;
+      color: hsl(0, 0%, 100%);
+    }
+
+    .header:hover{
+      color:hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+
+    .flex-container-1{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .crypto,.time{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .time{
+      color: hsl(215, 51%, 70%);
+    }
+
+    .crypto{
+      color: hsl(178, 100%, 50%);
+    }
+
+    .flex-container-2{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1rem;
+      margin-top: 0.1rem;
+    }
+
+    .profile-image{
+      height: 40px;
+      width: 40px;
+      align-self: center;
+      border: 2px solid white;
+      border-radius: 50%;
+    }
+
+    hr{
+      margin-top: 1.5rem;
+      height: 2px;
+      background-color: hsl(215, 32%, 27%);
+      border-style: none;
+    }
+
+    .name{
+      color: hsl(0, 0%, 100%);
+    }
+    .name:hover{
+      color:hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+    .paragraph{
+      color: hsl(215, 51%, 70%);
+    }
+
+    .profile-para{
+      color: hsl(215, 51%, 70%);
+    }
+    .dark-shadow{
+      display: block;
+      height: 650px;
+      width: 350px;
+      position: relative;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 3rem;
+      border-radius: 3rem;
+      background-color: hsl(216, 68%, 9%);
+    }
+    .light-shadow{
+      height: 700px;
+      width: 385px;
+      position: relative;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+      border-radius: 3rem;
+      background-color: hsl(216, 53%, 10%);
+    }
+    @media(max-width:400px){
+      .light-shadow{
+        width: 350px;
+        height: 700px;
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .dark-shadow{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      body{
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="light-shadow">
+    <div class="dark-shadow">
+      <div class="card-container">
+        <div class="image-holder">
+          <img src="./images/image-equilibrium.jpg" alt="glass cube picture" class="cube">
+        </div>
+    
+    
+        <div class="card-body">
+        <h2 class="header">Equilibrium #3429 </h2>
+        <p class="paragraph">Our Equilibrium collection promotes balance and calm.</p>
+        <div class="flex-container-1"><div class="crypto"><svg width="11" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" fill="#00FFF8"/></svg>0.041 ETH </div>
+        <div class="time"><svg width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z" fill="#8BACD9"/></svg>3 days left </div></div>
+        
+        <hr>
+        
+        <div class="flex-container-2">
+          <img class="profile-image" src="./images/image-avatar.png" alt="profile picture">
+          
+          <p class="profile-para">Creation of <span class="name">Jules Wyvern</span>
+          </p>
+        </div>
+        </div>
+    
+      </div>
+    
+    </div>
+  </div>
+
+
+
+  
+  
+ 
+  
+  
+  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Pycoder300">Pycoder</a>.
+  </div>
+
+</body>
+</html>
